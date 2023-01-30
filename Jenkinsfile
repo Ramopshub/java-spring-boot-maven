@@ -6,9 +6,7 @@ pipeline {
     }
     stages {
 	
-	     stages {
-
-        stage('Checkout Code from Git') {
+	stage('Checkout Code from Git') {
                steps {
         git branch: 'main', url: 'https://github.com/Ramopshub/java-spring-boot-maven.git'
     }
