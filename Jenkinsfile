@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout Code from Git') {
                steps {
-        git branch: 'main', url: 'https://github.com/TechVerito-Github/java-spring-boot-maven.git'
+        git branch: 'main', url: 'https://github.com/Ramopshub/java-spring-boot-maven.git'
     }
    }
         stage('Compile and Clean') { 
