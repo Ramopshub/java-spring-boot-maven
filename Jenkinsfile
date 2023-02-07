@@ -42,13 +42,13 @@ pipeline {
         }
         stage('Docker Push'){
             steps {
-                sh 'docker push ramvn/docker_jenkins_springboot_TechVerito:${BUILD_NUMBER}'
+                sh 'docker push ramvn/docker_jenkins_springboot:${BUILD_NUMBER}'
             }
         }
         stage('Docker deploy'){
             steps {
                
-                sh 'docker run -itd -p  8081:8080 ramvn/docker_jenkins_springboot_TechVerito:${BUILD_NUMBER}'
+                sh 'docker run -itd -p  8081:8080 ramvn/docker_jenkins_springboot:${BUILD_NUMBER}'
             }
         }
         stage('Archving') { 
