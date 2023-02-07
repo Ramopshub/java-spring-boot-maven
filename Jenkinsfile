@@ -29,7 +29,7 @@ pipeline {
             steps {
                 echo "Hello Ram"
                 sh 'ls'
-                sh 'docker build -t  ramvn/docker_jenkins_springboot_TechVerito:${BUILD_NUMBER} .'
+                sh 'docker build -t  ramvn/docker_jenkins_springboot:${BUILD_NUMBER} .'
             }
         }
         stage('Docker Login'){
