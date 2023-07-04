@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+     name: webapp-deplmnt
+     labels:
+           app: webappnginx
+spec:
+    replicas: 3
+    template:
+         metadata:
+           name: webappnginx-pod
+           labels:
+             app: webappnginx
+         spec:
+           containers:
+            - name: nginx
+              image: ramvn/docker_jenkins_springboot:9
+    selector:
+        matchLabels:
+                app: webappnginx
