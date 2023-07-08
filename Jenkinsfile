@@ -56,13 +56,13 @@ pipeline {
                  archiveArtifacts '**/target/*.jar'
             }
         }
-	 stage('Deploy') {
-      steps {
+	// stage('Deploy') {
+      //steps {
         // Deploy to Kubernetes cluster
-        withKubeConfig([credentialsId: 'eks-cred', serverUrl: 'https://CDC73CD7A8CF370E71F7D1AEFDC0EBE9.gr7.ap-south-1.eks.amazonaws.com']) {
-          sh 'kubectl apply -f ekxctl.yaml'
-        }
-      }
+        //withKubeConfig([credentialsId: 'eks-cred', serverUrl: 'https://CDC73CD7A8CF370E71F7D1AEFDC0EBE9.gr7.ap-south-1.eks.amazonaws.com']) {
+          //sh 'kubectl apply -f ekxctl.yaml'
+        //}
+      //}
     }
 }
 
